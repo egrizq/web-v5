@@ -8,7 +8,13 @@ import jobDesc from "./components/job-desc";
 import { dsCertifications, dicodingCertifications, coursera, udemy, Learning, Path } from "./components/certifications";
 
 export default function Home() {
-    const [show, setShow] = useState<boolean>(true)
+    const [show, setShow] = useState<boolean>(false)
+    const [email, setEmail] = useState<boolean>(false)
+
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText('rizq.ramadhan17@gmail.com');
+        alert("email has just copy!")
+    }
     
     return (
     <>
@@ -16,7 +22,7 @@ export default function Home() {
             <div className="flex justify-center">
                 <div className="flex sm:w-11/12 md:w-11/12 lg:w-8/12 xl:w-6/12 flex-col">
                     <div className="flex p-4">
-                        <img src="/round photo.png" width="150" height="auto" />
+                        <img src="/round photo.png" alt="foto profile" width="150" height="auto" />
                     </div>
 
                     <div className="flex flex-col space-y-2">
@@ -25,24 +31,28 @@ export default function Home() {
                         <Name tag="Based in Jakarta, Indonesia" />
                     </div>
 
-                    <div className="flex text-justify py-6">
+                    <div className="flex text-justify py-3">
                         As a 5th semester Computer Science student at Universitas Dian Nusantara, 
                         I’m excited to share my journey and the portfolio I’m working on!
                     </div>
 
                     <div className="flex flex-row space-x-2 py-3">
-                        <Contacts 
-                            tag="Resume" 
-                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
+                        <a href="/CV_Muhammad Rizq Ramadhan.pdf" className="hover:text-blue-700" download>Resume</a>
+                            <span>|</span>
                         <Contacts 
                             tag="Linkendln" 
                             link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
-                        <Contacts 
-                            tag="Email" 
-                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
+                            <span>|</span>
+
+                        <button onClick={() => setEmail(!email)} className="hover:text-blue-700">
+                            {!email ? <p>Email</p> : <p onClick={handleCopyEmail}>rizq.ramadhan17@gmail.com</p>}
+                        </button>
+                        <span>|</span>
+ 
                         <Contacts 
                             tag="Medium" 
                             link="https://medium.com/@rizq.ramadhan17" />
+                            <span>|</span>
                         <Contacts 
                             tag="Github" 
                             link="https://github.com/egrizq" />
@@ -61,7 +71,7 @@ export default function Home() {
                     linkCode="https://github.com/egrizq/text_summarization"
                     tags={["Text Summarization", "Python", "Machine Learning", "Javascript", "Torch", "HTML", "CSS"]}
                 />
-
+                
                 <CreateCard 
                     titleName="Deploying a Model with Pizza or Pasta Recognition in Real Time"
                     titleLink="https://medium.com/@rizq.ramadhan17/end-to-end-deploying-a-cnn-model-to-local-host-e509b85909f1"
@@ -118,7 +128,7 @@ export default function Home() {
                         {jobDesc()}
                     </div>
                     
-                    <Section tag="Skills" />
+                    <Section tag="Tech Stacks" />
                     <div className="flex w-full justify-center p-2 py-3">
                         <div className="flex sm:w-10/12 md:w-12/12 justify-center flex-wrap">
                             {listSkill()}
@@ -145,8 +155,24 @@ export default function Home() {
                     </div>
                    
                     <Path name="Udemy" />
-                    <div className="flex text-justify px-6">
+                    <div className="flex text-justify px-6 pb-4">
                         {udemy()}
+                    </div>
+
+                    <hr className="border-t border-1 border-dashed border-black " />
+
+                    <div className="flex flex-row justify-around space-x-3 pb-4">
+                        <Contacts 
+                            tag="Linkendln" 
+                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
+                        <a href="/CV_Muhammad Rizq Ramadhan.pdf" className="hover:text-blue-700" download>Resume</a>
+                        <span>🤝</span>
+                        <Contacts 
+                            tag="Medium" 
+                            link="https://medium.com/@rizq.ramadhan17" />
+                        <Contacts 
+                            tag="Github" 
+                            link="https://github.com/egrizq" />
                     </div>
 
                 </div>

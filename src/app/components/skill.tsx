@@ -49,31 +49,6 @@ const data = [
             alt: "mongodb",
             width: "65"
         },
-        {
-            imgLink: "https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg",
-            alt: "flask",
-            width: "65"
-        },
-        {
-            imgLink: "https://raw.githubusercontent.com/gin-gonic/logo/eecb3150aa7ce5a77b97fd834276b2b6958eaa9d/color.svg",
-            alt: "gin-gonic",
-            width: "55"
-        },
-        {
-            imgLink: "https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png",
-            alt: "express.js",
-            width: "65"
-        }, 
-        {
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg",
-            alt: "pandas",
-            width: "65"
-        }, 
-        {
-            imgLink: "https://seaborn.pydata.org/_images/logo-mark-lightbg.svg",
-            alt: "seaborn",
-            width: "65"
-        }, 
 ]
 
 const SkillLogo: React.FC<{imgLink: string, alt: string, width: string}> = ({imgLink, alt, width}) => {

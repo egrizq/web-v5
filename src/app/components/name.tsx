@@ -12,8 +12,8 @@ const Contacts: React.FC<{tag: string, link: string}> = ({tag, link}) => {
     return (
         <>
             <a href={link}
-                className="hover:text-blue-700">{tag}</a>
-            <p>|</p>
+                className="hover:text-blue-700">{tag}
+            </a>
         </>
     )
 }
