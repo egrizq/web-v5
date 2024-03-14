@@ -1,113 +1,158 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
+import "../app/styles.css"
+import {CreateCard, renderCard } from "./components/cards";
+import {Contacts, Name, Section} from "./components/name"
+import listSkill from "./components/skill";
+import jobDesc from "./components/job-desc";
+import { dsCertifications, dicodingCertifications, coursera, udemy, Learning, Path } from "./components/certifications";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    const [show, setShow] = useState<boolean>(true)
+    
+    return (
+    <>
+        <div className="container mx-auto p-2">
+            <div className="flex justify-center">
+                <div className="flex sm:w-11/12 md:w-11/12 lg:w-8/12 xl:w-6/12 flex-col">
+                    <div className="flex p-4">
+                        <img src="/round photo.png" width="150" height="auto" />
+                    </div>
+
+                    <div className="flex flex-col space-y-2">
+                        <Name tag="Hey, I'm Muhammad Rizq Ramadhan" />
+                        <Name tag="I'm a Software Engineering" />
+                        <Name tag="Based in Jakarta, Indonesia" />
+                    </div>
+
+                    <div className="flex text-justify py-6">
+                        As a 5th semester Computer Science student at Universitas Dian Nusantara, 
+                        I’m excited to share my journey and the portfolio I’m working on!
+                    </div>
+
+                    <div className="flex flex-row space-x-2 py-3">
+                        <Contacts 
+                            tag="Resume" 
+                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
+                        <Contacts 
+                            tag="Linkendln" 
+                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
+                        <Contacts 
+                            tag="Email" 
+                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
+                        <Contacts 
+                            tag="Medium" 
+                            link="https://medium.com/@rizq.ramadhan17" />
+                        <Contacts 
+                            tag="Github" 
+                            link="https://github.com/egrizq" />
+                    </div>
+
+                    <Section tag="Projects" />
+                </div>
+
+            </div>
+
+            <div className="flex flex-col py-3">
+                <CreateCard 
+                    titleName="The Main Idea Building Text Summarization Using Hugging Face!"
+                    titleLink="https://medium.com/@rizq.ramadhan17/the-main-idea-building-text-summarization-using-hugging-face-fae34e7500f4"
+                    mainText="Sharing ideas and building text summarization using Transformers from Hugging Face to understand English long text into a concise conclusion Bahasa."
+                    linkCode="https://github.com/egrizq/text_summarization"
+                    tags={["Text Summarization", "Python", "Machine Learning", "Javascript", "Torch", "HTML", "CSS"]}
+                />
+
+                <CreateCard 
+                    titleName="Deploying a Model with Pizza or Pasta Recognition in Real Time"
+                    titleLink="https://medium.com/@rizq.ramadhan17/end-to-end-deploying-a-cnn-model-to-local-host-e509b85909f1"
+                    mainText="Deploying a Convolutional Neural Networks (CNN) model with Flask to recognize pizza and pasta images in real-time on local development."
+                    linkCode="https://github.com/egrizq/pizza_or_pasta/tree/master"
+                    tags={["Deep Learning", "Python", "TensorFlow", "Image Processing", "Flask", "HTML", "Boostrap"]}
+                />
+
+                <CreateCard 
+                    titleName="Exploring Bike Sharing System"
+                    titleLink="https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e"
+                    mainText="Exploring the correlations between user behavior by season, weather, temperature, and hour to identify bike sharing patterns"
+                    linkCode="https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e"
+                    tags={["Exploratory Data Analysis", "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"]}
+                />
+
+                <CreateCard 
+                    titleName="Sentiment Analysis for Batik Air Reviews"
+                    titleLink="https://medium.com/@rizq.ramadhan17/sentiment-analysis-for-batik-air-reviews-b834d9b13391"
+                    mainText="Implemented web scraping to collect the reviews. Utilized the Vader Sentiment for in-depth sentiment analysis and visualization through Word Cloud"
+                    linkCode="https://github.com/egrizq/batik_air/blob/main/batik_air_reviews.ipynb"
+                    tags={["Python", "NLTK", "Beautiful Soup", "Vader Sentiment"]}
+                />
+
+                {renderCard({show})}
+            </div>
+
+            <div className="container flex justify-center mx-auto p-2 font-mono">
+                <button className="px-4 py-2 bg-gray-300 border-black border-2 border-opacity-50 hover:bg-gray-200 rounded-sm"
+                    onClick={() => setShow(!show)}>
+                    {!show ? <p>See All</p> : <p>Close</p>}
+                </button>
+            </div>
+
+            <div className="flex justify-center">
+                <div className="flex sm:w-11/12 md:w-11/12 lg:w-8/12 xl:w-6/12 flex-col space-y-4">
+                    
+                    <Section tag="Education" />
+                    <div className="flex flex-col space-y-4 text-justify">
+                        <h1 className="font-semibold text-xl">Computer Science</h1>
+                        <p>Universitas Dian Nusantara (2021 – Now)</p>
+                        <p>Having a 3.42 cumulative IPK in the 5th semester</p>
+                        <p>I'm enthusiastic about pursuing opportunities in the data field to contribute my skills in data analysis, programming, and problem-solving to a dynamic team.</p>
+                    </div>
+
+                    <Section tag="Work Experience" />
+                    <span className="flex font-semibold text-xl">
+                        Calibration Specialist
+                    </span>
+                    <span className="flex">
+                        PT.Suryaraya Rubberindo Industries (Mart 2021 – Mart 2023)
+                    </span>
+                    <div className="flex text-justify px-6">
+                        {jobDesc()}
+                    </div>
+                    
+                    <Section tag="Skills" />
+                    <div className="flex w-full justify-center p-2 py-3">
+                        <div className="flex sm:w-10/12 md:w-12/12 justify-center flex-wrap">
+                            {listSkill()}
+                        </div>
+                    </div>
+
+                    <Section tag="Certifications" />
+                    <Learning name="IDCamp 2023" />
+                    <Path name="Data Science Learning Path" />
+                    <div className="flex text-justify px-6">
+                        {dsCertifications()}
+                    </div>
+
+                    <Learning name="Dicoding" />
+                    <Path name="Dicoding For University Batch 1" />
+                    <div className="flex text-justify px-6">
+                        {dicodingCertifications()}
+                    </div>
+
+                    <Learning name="Others" />
+                    <Path name="Coursera" />
+                    <div className="flex text-justify px-6">
+                        {coursera()}
+                    </div>
+                   
+                    <Path name="Udemy" />
+                    <div className="flex text-justify px-6">
+                        {udemy()}
+                    </div>
+
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
