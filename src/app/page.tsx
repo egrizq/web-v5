@@ -13,7 +13,7 @@ export default function Home() {
 
     const handleCopyEmail = () => {
         navigator.clipboard.writeText('rizq.ramadhan17@gmail.com');
-        alert("email has just copy!")
+        alert("The email has been copied.")
     }
     
     return (
@@ -65,13 +65,19 @@ export default function Home() {
 
             <div className="flex flex-col py-3">
                 <CreateCard 
+                    titleName="CRUD API for Animal Grooming Services with TypeScript"
+                    titleLink="https://github.com/egrizq/animal-grooming/blob/master/README.md"
+                    mainText="Building RESTful API for animal grooming services with TypeScript and Express.js. Leveraging Prisma ORM and MySQL, ensuring efficient database management. Implement JWT for secure authentication and Zod with data validation."
+                    linkCode="https://github.com/egrizq/animal-grooming/tree/master/src"
+                    tags={["REST API", "TypeScript", "Express.js", "Prisma", "MySQL", "JWT", "Zod"]}
+                />
+                <CreateCard 
                     titleName="The Main Idea Building Text Summarization Using Hugging Face!"
                     titleLink="https://medium.com/@rizq.ramadhan17/the-main-idea-building-text-summarization-using-hugging-face-fae34e7500f4"
                     mainText="Sharing ideas and building text summarization using Transformers from Hugging Face to understand English long text into a concise conclusion Bahasa."
                     linkCode="https://github.com/egrizq/text_summarization"
                     tags={["Text Summarization", "Python", "Machine Learning", "Javascript", "Torch", "HTML", "CSS"]}
                 />
-                
                 <CreateCard 
                     titleName="Deploying a Model with Pizza or Pasta Recognition in Real Time"
                     titleLink="https://medium.com/@rizq.ramadhan17/end-to-end-deploying-a-cnn-model-to-local-host-e509b85909f1"
@@ -79,21 +85,12 @@ export default function Home() {
                     linkCode="https://github.com/egrizq/pizza_or_pasta/tree/master"
                     tags={["Deep Learning", "Python", "TensorFlow", "Image Processing", "Flask", "HTML", "Boostrap"]}
                 />
-
                 <CreateCard 
                     titleName="Exploring Bike Sharing System"
                     titleLink="https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e"
                     mainText="Exploring the correlations between user behavior by season, weather, temperature, and hour to identify bike sharing patterns"
                     linkCode="https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e"
                     tags={["Exploratory Data Analysis", "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"]}
-                />
-
-                <CreateCard 
-                    titleName="Sentiment Analysis for Batik Air Reviews"
-                    titleLink="https://medium.com/@rizq.ramadhan17/sentiment-analysis-for-batik-air-reviews-b834d9b13391"
-                    mainText="Implemented web scraping to collect the reviews. Utilized the Vader Sentiment for in-depth sentiment analysis and visualization through Word Cloud"
-                    linkCode="https://github.com/egrizq/batik_air/blob/main/batik_air_reviews.ipynb"
-                    tags={["Python", "NLTK", "Beautiful Soup", "Vader Sentiment"]}
                 />
 
                 {renderCard({show})}

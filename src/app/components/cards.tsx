@@ -25,19 +25,26 @@ const CreateCard: React.FC<{titleName: string, titleLink: string, mainText: stri
 const renderCard: React.FC<{show: boolean}> = ({show}) => {
     const data = [
         {
-          titleName: "Alphabet Recognition with CNN Model",
-          titleLink: "https://medium.com/@rizq.ramadhan17/alphabet-recognition-with-cnns-model-34005fa5b89d",
-          mainText: "Developed a Convolutional Neural Networks (CNN) model to recognize lowercase alphabets with 85% accuracy rate.",
-          linkCode: "https://www.kaggle.com/code/rizqramadhan/german-alphabet-recognition",
-          tags: ["Deep Learning", "Python", "TensorFlow", "Pandas", "Numpy", "Matplotlib"]
+            titleName: "Sentiment Analysis for Batik Air Reviews",
+            titleLink: "https://medium.com/@rizq.ramadhan17/sentiment-analysis-for-batik-air-reviews-b834d9b13391",
+            mainText: "Implemented web scraping to collect the reviews. Utilized the Vader Sentiment for in-depth sentiment analysis and visualization through Word Cloud",
+            linkCode: "https://github.com/egrizq/batik_air/blob/main/batik_air_reviews.ipynb",
+            tags: ["Python", "NLTK", "Beautiful Soup", "Vader Sentiment"]
         },
         {
-          titleName: "Power BI: A showcase of my Dashboards",
-          titleLink: "https://medium.com/@rizq.ramadhan17/power-bi-dashboard-a-showcase-of-my-work-ebd1ba69859e",
-          mainText: "Collection of my Power BI dashboards",
-          linkCode: "https://medium.com/@rizq.ramadhan17/power-bi-dashboard-a-showcase-of-my-work-ebd1ba69859e ",
-          tags: ["Power BI"]
-        }
+            titleName: "Alphabet Recognition with CNN Model",
+            titleLink: "https://medium.com/@rizq.ramadhan17/alphabet-recognition-with-cnns-model-34005fa5b89d",
+            mainText: "Developed a Convolutional Neural Networks (CNN) model to recognize lowercase alphabets with 85% accuracy rate.",
+            linkCode: "https://www.kaggle.com/code/rizqramadhan/german-alphabet-recognition",
+            tags: ["Deep Learning", "Python", "TensorFlow", "Pandas", "Numpy", "Matplotlib"]
+        },
+        {
+            titleName: "Power BI: A showcase of my Dashboards",
+            titleLink: "https://medium.com/@rizq.ramadhan17/power-bi-dashboard-a-showcase-of-my-work-ebd1ba69859e",
+            mainText: "Collection of my Power BI dashboards",
+            linkCode: "https://medium.com/@rizq.ramadhan17/power-bi-dashboard-a-showcase-of-my-work-ebd1ba69859e ",
+            tags: ["Power BI"]
+        },
     ]
     
     if(show) {

@@ -1,7 +1,7 @@
 const Name: React.FC<{tag: string}> = ({tag}) => {
     return (
         <>
-            <div className="flex text-3xl text-bold">
+            <div className="flex text-3xl font-semibold">
                 {tag}
             </div>
         </>
