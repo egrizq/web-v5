@@ -109,15 +109,16 @@ export default function Home() {
                     <Section tag="Education" />
                     <div className="flex flex-col space-y-4 text-justify">
                         <h1 className="font-semibold text-xl">Computer Science</h1>
-                        <p>Universitas Dian Nusantara (2021 – Now)</p>
+                        <p>Universitas Dian Nusantara (2021 – Present)</p>
                         <p>Having a 3.42 cumulative IPK in the 5th semester</p>
                         <p>I'm enthusiastic about pursuing opportunities in the data field to contribute my skills in data analysis, programming, and problem-solving to a dynamic team.</p>
                     </div>
 
                     <Section tag="Work Experience" />
-                    <span className="flex font-semibold text-xl">
+                    <a href="https://medium.com/@rizq.ramadhan17/apa-itu-kalibrasi-81020acc5e18" 
+                        className="flex font-semibold text-xl hover:text-blue-700">
                         Calibration Specialist
-                    </span>
+                    </a>
                     <span className="flex">
                         PT.Suryaraya Rubberindo Industries (Mart 2021 – Mart 2023)
                     </span>
