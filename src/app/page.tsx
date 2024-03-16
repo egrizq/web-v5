@@ -85,13 +85,6 @@ export default function Home() {
                     linkCode="https://github.com/egrizq/pizza_or_pasta/tree/master"
                     tags={["Deep Learning", "Python", "TensorFlow", "Image Processing", "Flask", "HTML", "Boostrap"]}
                 />
-                <CreateCard 
-                    titleName="Exploring Bike Sharing System"
-                    titleLink="https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e"
-                    mainText="Exploring the correlations between user behavior by season, weather, temperature, and hour to identify bike sharing patterns"
-                    linkCode="https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e"
-                    tags={["Exploratory Data Analysis", "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"]}
-                />
 
                 {renderCard({show})}
             </div>
@@ -107,12 +100,16 @@ export default function Home() {
                 <div className="flex sm:w-11/12 md:w-11/12 lg:w-8/12 xl:w-6/12 flex-col space-y-4">
                     
                     <Section tag="Education" />
-                    <div className="flex flex-col space-y-4 text-justify">
+                    <div className="flex flex-col space-y-3 text-justify">
                         <h1 className="font-semibold text-xl">Computer Science</h1>
                         <p>Universitas Dian Nusantara (2021 – Present)</p>
                         <p>Having a 3.42 cumulative IPK in the 5th semester</p>
-                        <p>I'm enthusiastic about pursuing opportunities in the data field to contribute my skills in data analysis, programming, and problem-solving to a dynamic team.</p>
+
+                        <h1 className="font-semibold text-xl">Data Structures & Algorithms</h1>
+                        <p>I'm enthusiastic about pursuing opportunities in the Software Engineering field to contribute my skills in data analysis, programming, and problem-solving to a dynamic team.</p>
+                        <img src="https://leetcard.jacoblin.cool/egrizq?theme=light&border=1&animation=false" width={"550px"} />
                     </div>
+
 
                     <Section tag="Work Experience" />
                     <a href="https://medium.com/@rizq.ramadhan17/apa-itu-kalibrasi-81020acc5e18" 

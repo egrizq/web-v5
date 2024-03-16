@@ -25,6 +25,13 @@ const CreateCard: React.FC<{titleName: string, titleLink: string, mainText: stri
 const renderCard: React.FC<{show: boolean}> = ({show}) => {
     const data = [
         {
+            titleName: "Exploring Bike Sharing System",
+            titleLink: "https://medium.com/@rizq.ramadhan17/bike-sharing-analysis-cc8f1c987b1e",
+            mainText: "Exploring the correlations between user behavior by season, weather, temperature, and hour to identify bike sharing patterns",
+            linkCode: "https://github.com/egrizq/bike_analysis/tree/master",
+            tags: ["Exploratory Data Analysis", "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"]
+        },
+        {
             titleName: "Sentiment Analysis for Batik Air Reviews",
             titleLink: "https://medium.com/@rizq.ramadhan17/sentiment-analysis-for-batik-air-reviews-b834d9b13391",
             mainText: "Implemented web scraping to collect the reviews. Utilized the Vader Sentiment for in-depth sentiment analysis and visualization through Word Cloud",
