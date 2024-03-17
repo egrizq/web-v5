@@ -103,11 +103,16 @@ export default function Home() {
                     <div className="flex flex-col space-y-3 text-justify">
                         <h1 className="font-semibold text-xl">Computer Science</h1>
                         <p>Universitas Dian Nusantara (2021 – Present)</p>
-                        <p>Having a 3.42 cumulative IPK in the 5th semester</p>
+                        <div className="px-2">
+                            <span>I'm enthusiastic about pursuing opportunities in the Software Engineering field 
+                                to contribute my skills in data analysis, programming, and problem-solving to a dynamic team.</span>
+                        </div>
 
-                        <h1 className="font-semibold text-xl">Data Structures & Algorithms</h1>
-                        <p>I'm enthusiastic about pursuing opportunities in the Software Engineering field to contribute my skills in data analysis, programming, and problem-solving to a dynamic team.</p>
-                        <img src="https://leetcard.jacoblin.cool/egrizq?theme=light&border=1&animation=false" width={"550px"} />
+                        <h1 className="font-semibold text-xl">LeetCode</h1>
+                        <div className="flex justify-center items-center">
+                            <img src="https://leetcard.jacoblin.cool/egrizq?theme=light&border=1&animation=false" 
+                                width={"550px"}  />
+                        </div>
                     </div>
 
 
