@@ -161,18 +161,12 @@ export default function Home() {
 
                     <hr className="border-t border-1 border-dashed border-black " />
 
-                    <div className="flex flex-row justify-around space-x-3 pb-4">
-                        <Contacts 
-                            tag="Linkendln" 
-                            link="https://www.linkedin.com/in/muhammad-rizq-ramadhan-031a1a1ba/" />
-                        <a href="/CV_Muhammad Rizq Ramadhan.pdf" className="hover:text-blue-700" download>Resume</a>
+                    <div className="flex justify-center space-x-5 pb-4">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWH4aEc68eFt7LS5r9JXqYvqNTVC88PoqspJ5N8IFhKxTadg/viewform?usp=sf_link">
+                            Feedback
+                        </a>
                         <span>🤝</span>
-                        <Contacts 
-                            tag="Medium" 
-                            link="https://medium.com/@rizq.ramadhan17" />
-                        <Contacts 
-                            tag="Github" 
-                            link="https://github.com/egrizq" />
+                        <span>Thank You</span>
                     </div>
 
                 </div>
