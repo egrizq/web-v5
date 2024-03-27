@@ -162,7 +162,8 @@ export default function Home() {
                     <hr className="border-t border-1 border-dashed border-black " />
 
                     <div className="flex justify-center space-x-5 pb-4">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWH4aEc68eFt7LS5r9JXqYvqNTVC88PoqspJ5N8IFhKxTadg/viewform?usp=sf_link">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWH4aEc68eFt7LS5r9JXqYvqNTVC88PoqspJ5N8IFhKxTadg/viewform?usp=sf_link"
+                            className="hover:text-blue-700">
                             Feedback
                         </a>
                         <span>🤝</span>
